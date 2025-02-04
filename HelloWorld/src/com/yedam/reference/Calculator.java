@@ -4,13 +4,23 @@ public class Calculator {
 	
 	// 1월달 출력.
 	public void showCalender() {
+		int spaces = 6;
+		int lastDate = 28;
+		String[] dateAry = new String[spaces + lastDate]; 
+		for (int i=0;i<dateAry.length;i++) {
+			if(i < spaces) {
+				dateAry[i] = "";
+				
+			} else {
+				dateAry[i] = "" + (i + 1 - spaces);
+			}
+		}
 		String[] days = {"Sun", "Mon", "Tue", "Wed", "Thr", "Fri", "Sat"};
 		for (String day : days) {
 			System.out.printf("%4s", day);
 		}
 		System.out.println("\n---------------------------------------");
 		// 공백, 말일 계산.
-		
 	}
 	
 	public Book getBookInfo(String btitle, Book[] bookAry) {

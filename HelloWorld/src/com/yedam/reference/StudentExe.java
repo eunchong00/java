@@ -10,16 +10,19 @@ public class StudentExe {
 //		std1.studentName = "홍길동";
 //		std1.engScore = 80;
 		std1.mathScore = 85;
+		std1.gender = Gender.MEN;
 
 		Student std2 = new Student();
 		std2.studentName = "김민수";
 		std2.engScore = 85;
 		std2.mathScore = 88;
+		std2.gender = Gender.MEN;
 
 		Student std3 = new Student();
 		std3.studentName = "홍정학";
 		std3.engScore = 75;
 		std3.mathScore = 90;
+		std1.gender = Gender.WOMEN;
 
 		students[0] = std1;
 		students[1] = std2;
@@ -30,15 +33,18 @@ public class StudentExe {
 		// 학생의 평균을 출력하는 프로그램을 작성.
 
 		Scanner scn = new Scanner(System.in);
-		System.out.println("이름을 입력>>");
-		String studName = scn.nextLine();
+//		System.out.println("이름을 입력>>");
+//		String studName = scn.nextLine();
 
 		for (int i = 0; i < students.length; i++) {
+			if (students[i] !=null 
+//					&& students[i].studentName.equals(studName)) {
+					&& students[i].gender == Gender.MEN) {
+				students[i].printInfo();
+//				System.out.printf("학생의 평균은 %.2f.\n", students[i].getAverage() );
+			}
 //			if (students[i] != null && students[i].getAverage() >= 85 ) {
 //				students[i].printInfo();
-			if (students[i] !=null && students[i].studentName.equals(studName)) {
-				System.out.printf("학생의 평균은 %.1f", students[i].getAverage() );
-			}
 		}
 	}
 }

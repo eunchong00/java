@@ -94,6 +94,6 @@ public class ForLoop2 {
 
 		System.out.println("end of prog.");
 
+		scn.close();
 	} // end of main.
-
 } // end of class.
