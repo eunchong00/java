@@ -1,6 +1,6 @@
 package com.yedam.reference;
 // gender => MEN, WOMEN
-public class Student {
+public  class Student {
 	String studName;
 	String studentName;
 	int engScore;
@@ -16,7 +16,7 @@ public class Student {
 		this.studentName = studentName;
 		this.engScore = engScore;
 	}
-	Student(String studentName, int engScore, int mathScore){
+	public Student(String studentName, int engScore, int mathScore){
 		this.studentName = studentName;
 		this.engScore = engScore;
 		this.mathScore = mathScore;
